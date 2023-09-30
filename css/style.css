@@ -374,7 +374,7 @@ label.error{
 }
 
 .double-bounce1, .double-bounce2 {
-  background-image: url('../img/Images/hearts.png');
+  background-image: url('../img/hearts.png');
   background-repeat: no-repeat;
   background-size: contain;
   width: 100%;
@@ -454,13 +454,20 @@ label.error{
   width: 100%;
   padding: 0 1.5rem;
   border-bottom: 1px solid rgba(52,52,52,0.1);
-  height:4.7rem;
+  height:3.7rem;
 }
 
 
 @media(min-width: 992px){
   .navbar{
     padding: 0 3rem;
+  }
+}
+
+@media(max-width: 992px){
+  .navbar{
+    background-color: white;
+    opacity: 60%;
   }
 }
 
@@ -601,6 +608,12 @@ h1{
   justify-content: space-around;
   position: relative;
 }
+@media(min-width: 992px){
+  .couple-names{
+    padding-top: 50px;
+  }
+}
+
 .flower_set{
   background-size: contain;
   background-position: center;
@@ -679,41 +692,6 @@ h1{
   right:1.5rem;
   transform: translate(0,-50%);
 }
-#home {
-  text-align: center;
-}
-#home .scroll-wrap{
-  padding: 0 !important;
-}
-.saveDate{
-  margin: 20px;
-  font-size: 18px;
-  position: relative;
-}
-.saveDate::before{
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 200px;
-  background-image: url('../img/topline.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 100%;
-}
-.saveDate::after{
-  content: "";
-  position: absolute;
-  bottom: -180%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 200px;
-  background-image: url('../img/bottomline.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 100%;
-}
 @media(min-width: 992px){
   .progress-nav{
     right: 3rem;
@@ -752,118 +730,98 @@ h1{
 .progress-nav-white li.active ~ li:before{
   background-color: #fff;
 }
- 
-/* About */ 
 
-.experience-info{
-  margin-bottom: 4.5rem;
-}
+/* Home */
 
-.experience-number{
-  display: inline-block;
-  font-size: 10rem;
-  line-height: 1;
-  font-family: 'Karla', sans-serif;
-  color:#EC365A;
-}
-
-.experience-text{
-  font-family: ;
-  font-size: 18px;
-  display: inline-block;
-  color: #000;
-  line-height: 1.4;
-  font-weight: 700;
-} 
-
-/* Owl Carousel */
-
-.owl-dots{
-  position: absolute;
-  width: 100%;
-  margin-top:1.5rem;
+#home {
   text-align: center;
 }
+#home .scroll-wrap{
+  padding: 0 !important;
+}
+.bg_flower{
+  position: relative;
+}
+.couple-names .animate__animated.animate__bounceInLeft,.couple-names .animate__animated.animate__bounceInRight {
+  --animate-duration: 3s;
+}
+.bg_flower .animate__animated.animate__backInDown {
+  --animate-duration: 5s;
+}
+.saveDate{
+  margin: 20px;
+  font-size: 18px;
+  position: relative;
+}
+.saveDate::before{
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 200px;
+  background-image: url('../img/topline.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+}
+.saveDate::after{
+  content: "";
+  position: absolute;
+  bottom: -180%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 200px;
+  background-image: url('../img/bottomline.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+}
 
-.owl-dot{
+/* Counter */
+
+.counter_cover_1{
+  transform: translateY(-100%);
+  opacity: 0 !important;
+  transition: 1s;
+}
+.active .counter_cover_1{ 
+  transform: translateY(0);
+  opacity: 1 !important;
+  transition: 3s;
+}
+.counter_cover_2{
+  transform: translateY(100%);
+  opacity: 0 !important;
+  transition: 1s;
+}
+.active .counter_cover_2{ 
+  transform: translateY(0);
+  opacity: 1 !important;
+  transition: 3s;
+}
+
+#clock{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#clock div{
+  text-align: center;
   display: inline-block;
-  margin:0 0.35rem;
+  font-size: 48px;
+  color: #EC365A;
 }
-
-.owl-dot:focus{
-  outline: none;
-}
-
-.owl-dots span{
+#clock div span{
+  margin-top: 20px;
   display: block;
-  width: 20px;
-  height:3px;
-  background-color: #d6d6d6;
+  font-family: "Dosis", sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #1d1d1d;
 }
 
-.owl-dot.active span{
-  background-color: #EC365A;
-}
-
-.owl-nav{
-  font-family: 'Tahoma';
-  position: absolute;
-  right: 0;
-  top: 0;
-  margin-top: -8.6rem;
-  font-size: 6rem;
-}
-
-.owl-prev{
-  margin-right: 0.6rem;
-}
-
-.owl-next,
-.owl-prev{
-  opacity: 0.45;
-  transition: all 0.3s;
-}
-
-.owl-prev:focus,
-.owl-next:focus{
-  outline: none;
-}
-
-.owl-prev:hover,
-.owl-next:hover{
-  opacity: 1!important;
-  color:#EC365A!important;
-}
- 
-/* Bridal & Groom */
- 
-.photo-icon{
-  position: absolute;
-  overflow: hidden;
-  transition:all .6s .4s ease;
-  opacity: 0;
-}
-
-.photo-icon-1{
-  left:-20px;
-  bottom:-20px;
-}
-
-.photo-icon-2{
-  right:-20px;
-  top:-20px;
-}
-
-.active .photo-icon-1{
-  opacity: 1;
-  transition-delay: .7s
-}
-
-.active .photo-icon-2{
-  opacity: 1;
-  bottom:-50px;
-  transition-delay: 1s
-}
+/* Progress_Bar */
 
 .progress{
   height: 6px;
@@ -900,6 +858,111 @@ h1{
 .progress-item:nth-child(3) .progress-bar:before{
   transition-delay: 800ms;
 }
+
+/* Owl Carousel */
+
+.owl-dots{
+  position: absolute;
+  width: 100%;
+  margin-top:1.5rem;
+  text-align: center;
+}
+
+.owl-dot{
+  display: inline-block;
+  margin:0 0.35rem;
+}
+
+.owl-dot:focus{
+  outline: none;
+}
+
+.owl-dots span{
+  display: block;
+  width: 20px;
+  height:3px;
+  background-color: #d6d6d6;
+}
+
+.owl-dot.active span{
+  background-color: #EC365A;
+}
+#gallary .owl-nav{
+  margin-bottom:4.6rem;
+}
+#gallary.active span{
+  color: #EC365A;
+}
+.owl-nav{
+  font-family: 'Tahoma';
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: -8.6rem;
+  font-size: 6rem;
+}
+
+.owl-prev{
+  margin-right: 0.6rem;
+}
+
+.owl-next,
+.owl-prev{
+  opacity: 0.45;
+  transition: all 0.3s;
+}
+
+.owl-prev:focus,
+.owl-next:focus{
+  outline: none;
+}
+
+.owl-prev:hover,
+.owl-next:hover{
+  opacity: 1!important;
+  color:#EC365A!important;
+}
+ 
+/* Bridal & Groom */
+ 
+.photo-icon{
+  position: absolute; 
+  transition:all .6s .4s ease;
+  opacity: 0;
+}
+
+.photo-icon-1{
+  left:-20px;
+  bottom:-20px;
+  opacity: 1;
+}
+.photo-icon-2{
+  right:-20px;
+  top:-20px;
+  opacity: 1;
+}
+
+.photo-icon-1 img{
+  opacity: 0;
+  transform: translate(-20%,50%);
+  transition: 1s;
+}
+.active .photo-icon-1 img{
+  opacity: 1;
+  transform: translate(0,0);
+  transition: 3s;
+}
+.photo-icon-2 img{
+  opacity: 0;
+  transform: translate(20%,-20%);
+  transition: 1s;
+}
+.active .photo-icon-2 img{
+  opacity: 1;
+  transform: translate(0,0);
+  transition: 3s;
+}
+
 .bridal-section{
   position: relative;
 }
@@ -943,6 +1006,11 @@ h1{
   position: absolute;
   animation: rotateimage 60s infinite linear;
 }
+.signature{
+  font-size: 28px;
+  font-family: 'Tangerine', sans-serif;
+}
+
 @keyframes rotateimage {
   0%{
     transform:rotate(0deg) ;
@@ -958,22 +1026,20 @@ h1{
   margin-left: -2rem;
   line-height: 1;
   font-size: 12rem;
-  margin-top: -2rem;
-
-}
-
+  margin-top: -2rem; 
+} 
 .owl-nav{
   position: static;
   margin-top: 5rem;
-}
-
+} 
 .event{
   background-color: rgba(255,255,255,0.4);
   border-radius: 10px;
   padding: 20px;
 }
 
-/* Contact */
+
+/* Contact */ 
 
 .message{
   margin-bottom: 2rem;
@@ -992,51 +1058,17 @@ h1{
   background-color: rgba(0,0,0,0.5);
   position: absolute;
 }
-
-/* Custome style Added */
-
-
- 
-.bg_flower{
-  position: relative;
-}
-.couple-names .animate__animated.animate__bounceInLeft,.couple-names .animate__animated.animate__bounceInRight {
-  --animate-duration: 3s;
-}
-.bg_flower .animate__animated.animate__backInDown {
-  --animate-duration: 5s;
-}
-.SavetheDate{
-  font-family: 'Courier New', Courier, monospace;
-}
-/* Counter */
-#clock{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-#clock div{
-  text-align: center;
-  display: inline-block;
-  font-size: 48px;
-  color: #EC365A;
-}
-#clock div span{
-  margin-top: 20px;
-  display: block;
-  font-family: "Dosis", sans-serif;
-  text-transform: uppercase;
-  font-size: 24px;
-  color: #1d1d1d;
-}
-.signature{
-  font-size: 28px;
-  font-family: 'Tangerine', sans-serif;
-}
 .right-border{
   border-right:2px solid rgba(255,255,255,0.4) ;
 }
+#Counter {
+  transition: 0.5s;
+}
+
 @media (max-width:1024px){
+  #clock div{
+    font-size: 38px;
+  }
   .wishis{
     font-size: 32px;
   }
@@ -1086,6 +1118,9 @@ h1{
     position: absolute;
     animation: rotateimage 60s infinite linear;
   }
+  #clock div{
+    font-size: 28px;
+  }
   .right-border{
     border:none
   }
@@ -1101,6 +1136,9 @@ h1{
   .top-space{
     margin-top: 50px !important;
   }
+  #Counter .row{
+    flex-direction: column-reverse;
+  }
 }
 @media (max-width:380px){
   .h1{
@@ -1109,6 +1147,9 @@ h1{
   }
   .flower_set{
     display: none;
+  }
+  #clock div{
+    font-size: 24px;
   }
   .bottom-space{
     margin-bottom: 20px !important;

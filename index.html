@@ -7,7 +7,7 @@
     <!-- CSS -->
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa%7CScope+One%7CTangerine:700" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<link rel="stylesheet" href="css/animate.min.css"/>
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/jquery.pagepiling.min.css">
     <link rel="stylesheet" href="css/lightbox.css">
@@ -28,12 +28,11 @@
     <nav  class="navbar navbar-desctop">
       <div class="position-relative w-100"> 
 	    <!-- Brand-->
-	    <a class="navbar-brand">Sushmita & Ganesh</a>
+	    <a class="navbar-brand" href="./index.html">Sushmita & Ganesh</a>
 	  </div>
 	</nav>
 
-	<div id="pagepiling">
-	
+	<div id="pagepiling"> 
 		<!-- Save the Date -->
 		<section id="home" class="navbar-is-white text-white pp-scrollable d-flex align-items-center section position-absolute" style="background-image:url('./img/home_Section.png');z-index: 10 !important; " role="main">
 			<div class="intro">
@@ -44,7 +43,8 @@
 								<div class="couple_image">
 									<img class="animate__animated animate__fadeInUp bridal" src="./img/Bridelhome.png">
 								</div>
-								<h2 class="h1 mt-md-5 mt-3 text-white">Sushmita</h2>
+								<h2 class="h1 mt-md-5 mt-3 text-white d-md-block d-none">Sushmita</h2>
+								<h2 class="h1 mt-md-5 mt-3 text-white d-md-none d-block">Sushmita & Ganesh</h2>
 							</div> 
 							<div class="flower_set">
 								<img class="animate__animated animate__fadeInUp" src="./img/flower_port.png">
@@ -53,7 +53,7 @@
 								<div class="couple_image">
 									<img class="animate__animated animate__fadeInUp groom" src="./img/Groomhome.png">
 								</div>
-								<h2 class="h1 text-white mt-md-5 mt-3 ">Ganesh</h2>
+								<h2 class="h1 text-white mt-md-5 mt-3 d-md-block d-none">Ganesh</h2>
 							</div>
 						</div>
 						<div class="wishis mt-5 text-white sub_title ">
@@ -116,26 +116,29 @@
 					<div class="container">
 						<div class="row align-items-center">
 							<div class="col-md-6 pr-md-5 pr-lg-0">
-								<div class="mt-5 pt-2 SavetheDate text-md-left text-center">
-									<h2 class="heading">Save The <span class="text-primary">Date</span></h2>
-									<h2 class="sub_heading">We are <span class="text-primary">Happyli Married</span>
-									</h2>
+								<div class="mt-5 pt-2 SavetheDate text-md-left text-center" id="CounterTextOff">
+									<h2 class="heading" >Save The <span class="text-primary">Date</span></h2>
+									<!-- <h2 class="sub_heading">We are <span class="text-primary">Happyli Married</span></h2> -->
 								</div>
 							</div>
-							<div class="mt-5 mt-md-0 col-md-6 col-lg-5 text-center offset-lg-1">
-								<img src="./img/shape1.png" class="mb-3 animate__animated animate__fadeInDown">
-								<img src="./img/Preloader.png" class="mb-3">
+							<div class="mt-5 mt-md-0 col-md-6 col-lg-5 overflow-hide text-center offset-lg-1">
+								<img src="./img/shape1.png" class="mb-3 w-100 counter_cover_1 ">
+								<img id="merried-couple" src="./img/Preloader.png" class="mb-3">
 								<div class="clock-time">
-									<div id="clock" bis_skin_checked="1"></div>
+									<div id="clock" >
+										<div id="#days"></div>
+										<div id="#hours"></div>
+										<div id="#minutes"></div>
+										<div id="#seconds"></div>
+									</div>
 								</div>
-								<img src="./img/shape2.png" class="mt-3 animate__animated animate__fadeInUp">
+								<img src="./img/shape2.png" class="mt-3 counter_cover_2 w-100">
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
-	
+		</section> 
 		<!-- Bridal -->
 		<section id="bride" class="bridal-section section pp-scrollable d-flex align-items-center position-absolute">
 			<div class="intro">
@@ -168,8 +171,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
-	
+		</section> 
 		<!-- Groom -->
 		<section id="groom" class="groom-section section pp-scrollable d-flex align-items-center position-absolute">
 			<div class="intro">
@@ -179,7 +181,7 @@
 							<div class="col-lg-5 text-right">
 								<h2 class="">The<span class="text-primary heading">Groom</span></h2>
 								<p>
-									Hi I am Sushmita , Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque modi enim sint vel
+									Hi I am Ganesh , Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque modi enim sint vel
 									nemo laborum magnam architecto, accusantium vitae, consequatur fugiat distinctio
 									provident molestias quis rem minus eum similique voluptatum.
 								</p>
@@ -195,166 +197,158 @@
 										<div class="photo-icon photo-icon-1">
 											<img alt="" class="w-100" src="./img/rsvp1-100x100.png">
 										</div>
-										<img alt="" class="border-radius w-100" src="./img/Groom.png">
+										<img alt="" class="border-radius w-100" src="./img/groom.png">
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> 
+		<!-- Image Gallary -->
+		<section id="gallary"
+			class="gallary-sections navbar-is-white text-white section pp-scrollable d-flex align-items-center position-absolute" >
+			<div class="intro">
+				<div class="scroll-wrap">
+					
+						<div class="row">
+							<div class="col-12 ">
+								<div class="container">
+									<h2 class="mb-3">Our Engagement Gallary</h2>
+								</div>
+								<div class="carousel-gallary owl-carousel">
+									<div class="item">
+										<div class="imagesection">
+											<a href="./img/gallary/1.JPG" data-lightbox="gallary">
+												<img src="./img/gallary/1.JPG" >
+											</a>
+										</div> 	
+									</div>
+									<div class="item">
+										<div class="imagesection">
+											<a href="./img/gallary/2.JPG" data-lightbox="gallary">
+												<img src="./img/gallary/2.JPG" >
+											</a>
+										</div> 
+									</div>
+									<div class="item">
+										<div class="imagesection">
+											<a href="./img/gallary/4.JPG" data-lightbox="gallary">
+												<img src="./img/gallary/4.JPG" >
+											</a>
+										</div> 
+									</div>
+									<div class="item">
+										<div class="imagesection">
+											<a href="./img/gallary/5.JPG" data-lightbox="gallary">
+												<img src="./img/gallary/5.JPG" >
+											</a>
+										</div> 	
+									</div>
+									<div class="item">
+										<div class="imagesection">
+											<a href="./img/gallary/gallary6.png" data-lightbox="gallary">
+												<img src="./img/gallary/gallary6.png" >
+											</a>
+										</div> 
+									</div>
+									<div class="item">
+										<div class="imagesection">
+											<a href="./img/gallary/gallary7.png" data-lightbox="gallary">
+												<img src="./img/gallary/gallary7.png" >
+											</a>
+										</div> 
+									</div>
+									<div class="item">
+										<div class="imagesection">
+											<a href="./img/gallary/gallary8.png" data-lightbox="gallary">
+												<img src="./img/gallary/gallary8.png" >
+											</a>
+										</div> 
+									</div>
+								</div>
+							</div>
+						</div>
+					
+				</div>
+			</div>
+		</section> 
 
-		<!-- Image Gallary -->
-		<section id="gallary"
-			class="gallary-sections navbar-is-white text-white section pp-scrollable d-flex align-items-center position-absolute" >
-			<div class="intro">
-				<div class="scroll-wrap">
-					
-						<div class="row">
-							<div class="col-12 ">
-								<div class="container">
-									<h2 class="mb-3">Our Image Gallary</h2>
-								</div>
-								<div class="carousel-gallary owl-carousel">
-									<div class="item">
-										<div class="imagesection">
-											<a href="./img/gallary/gallary1.png" data-lightbox="gallary">
-												<img src="./img/gallary/gallary1.png" >
-											</a>
-										</div> 	
-									</div>
-									<div class="item">
-										<div class="imagesection">
-											<a href="./img/gallary/gallary2.png" data-lightbox="gallary">
-												<img src="./img/gallary/gallary2.png" >
-											</a>
-										</div> 
-									</div>
-									<div class="item">
-										<div class="imagesection">
-											<a href="./img/gallary/gallary3.png" data-lightbox="gallary">
-												<img src="./img/gallary/gallary3.png" >
-											</a>
-										</div> 
-									</div>
-									<div class="item">
-										<div class="imagesection">
-											<a href="./img/gallary/gallary4.png" data-lightbox="gallary">
-												<img src="./img/gallary/gallary4.png" >
-											</a>
-										</div> 
-									</div>
-									<div class="item">
-										<div class="imagesection">
-											<a href="./img/gallary/gallary5.png" data-lightbox="gallary">
-												<img src="./img/gallary/gallary5.png" >
-											</a>
-										</div> 	
-									</div>
-									<div class="item">
-										<div class="imagesection">
-											<a href="./img/gallary/gallary6.png" data-lightbox="gallary">
-												<img src="./img/gallary/gallary6.png" >
-											</a>
-										</div> 
-									</div>
-									<div class="item">
-										<div class="imagesection">
-											<a href="./img/gallary/gallary7.png" data-lightbox="gallary">
-												<img src="./img/gallary/gallary7.png" >
-											</a>
-										</div> 
-									</div>
-									<div class="item">
-										<div class="imagesection">
-											<a href="./img/gallary/gallary8.png" data-lightbox="gallary">
-												<img src="./img/gallary/gallary8.png" >
-											</a>
-										</div> 
-									</div>
-								</div>
+	<!-- Image Gallary -->
+	<section id="gallary"
+	class="gallary-sections navbar-is-white text-white section pp-scrollable d-flex align-items-center position-absolute" >
+	<div class="intro">
+		<div class="scroll-wrap">
+			
+				<div class="row">
+					<div class="col-12 ">
+						<div class="container">
+							<h2 class="mb-3">Our Pre-Wedding Gallary</h2>
+						</div>
+						<div class="carousel-gallary owl-carousel">
+							<div class="item">
+								<div class="imagesection">
+									<a href="./img/gallary/gallary1.png" data-lightbox="gallary">
+										<img src="./img/gallary/gallary1.png" >
+									</a>
+								</div> 	
+							</div>
+							<div class="item">
+								<div class="imagesection">
+									<a href="./img/gallary/gallary2.png" data-lightbox="gallary">
+										<img src="./img/gallary/gallary2.png" >
+									</a>
+								</div> 
+							</div>
+							<div class="item">
+								<div class="imagesection">
+									<a href="./img/gallary/gallary3.png" data-lightbox="gallary">
+										<img src="./img/gallary/gallary3.png" >
+									</a>
+								</div> 
+							</div>
+							<div class="item">
+								<div class="imagesection">
+									<a href="./img/gallary/gallary4.png" data-lightbox="gallary">
+										<img src="./img/gallary/gallary4.png" >
+									</a>
+								</div> 
+							</div>
+							<div class="item">
+								<div class="imagesection">
+									<a href="./img/gallary/gallary5.png" data-lightbox="gallary">
+										<img src="./img/gallary/gallary5.png" >
+									</a>
+								</div> 	
+							</div>
+							<div class="item">
+								<div class="imagesection">
+									<a href="./img/gallary/gallary6.png" data-lightbox="gallary">
+										<img src="./img/gallary/gallary6.png" >
+									</a>
+								</div> 
+							</div>
+							<div class="item">
+								<div class="imagesection">
+									<a href="./img/gallary/gallary7.png" data-lightbox="gallary">
+										<img src="./img/gallary/gallary7.png" >
+									</a>
+								</div> 
+							</div>
+							<div class="item">
+								<div class="imagesection">
+									<a href="./img/gallary/gallary8.png" data-lightbox="gallary">
+										<img src="./img/gallary/gallary8.png" >
+									</a>
+								</div> 
 							</div>
 						</div>
-					
+					</div>
 				</div>
-			</div>
-		</section>
-		<!-- Image Gallary -->
-		<section id="gallary"
-			class="gallary-sections navbar-is-white text-white section pp-scrollable d-flex align-items-center position-absolute" >
-			<div class="intro">
-				<div class="scroll-wrap">
-					
-						<div class="row">
-							<div class="col-12 ">
-								<div class="container">
-									<h2 class="mb-3">Our Image Gallary 2</h2>
-								</div>
-								<div class="carousel-gallary owl-carousel">
-									<div class="item">
-										<div class="imagesection">
-											<a href="./img/gallary/gallary1.png" data-lightbox="gallary">
-												<img src="./img/gallary/gallary1.png" >
-											</a>
-										</div> 	
-									</div>
-									<div class="item">
-										<div class="imagesection">
-											<a href="./img/gallary/gallary2.png" data-lightbox="gallary">
-												<img src="./img/gallary/gallary2.png" >
-											</a>
-										</div> 
-									</div>
-									<div class="item">
-										<div class="imagesection">
-											<a href="./img/gallary/gallary3.png" data-lightbox="gallary">
-												<img src="./img/gallary/gallary3.png" >
-											</a>
-										</div> 
-									</div>
-									<div class="item">
-										<div class="imagesection">
-											<a href="./img/gallary/gallary4.png" data-lightbox="gallary">
-												<img src="./img/gallary/gallary4.png" >
-											</a>
-										</div> 
-									</div>
-									<div class="item">
-										<div class="imagesection">
-											<a href="./img/gallary/gallary5.png" data-lightbox="gallary">
-												<img src="./img/gallary/gallary5.png" >
-											</a>
-										</div> 	
-									</div>
-									<div class="item">
-										<div class="imagesection">
-											<a href="./img/gallary/gallary6.png" data-lightbox="gallary">
-												<img src="./img/gallary/gallary6.png" >
-											</a>
-										</div> 
-									</div>
-									<div class="item">
-										<div class="imagesection">
-											<a href="./img/gallary/gallary7.png" data-lightbox="gallary">
-												<img src="./img/gallary/gallary7.png" >
-											</a>
-										</div> 
-									</div>
-									<div class="item">
-										<div class="imagesection">
-											<a href="./img/gallary/gallary8.png" data-lightbox="gallary">
-												<img src="./img/gallary/gallary8.png" >
-											</a>
-										</div> 
-									</div>
-								</div>
-							</div>
-						</div>
-					
-				</div>
-			</div>
-		</section>
-	
+			
+		</div>
+	</div>
+</section> 
 		<!-- Youtube Video -->
 		<section id="video" class="section pp-scrollable d-flex align-items-center position-absolute">
 			<div class="intro">
@@ -363,8 +357,8 @@
 						<div class="row align-items-center">
 							<div class="mt-5 mt-md-0 text-center col-12">
 								<div class="position-relative">
-									<img alt="" class="border-radius w-100" src="./img/Video_backgorund_image.png">
-									<a href="https://www.youtube.com/watch?v=sz6-F1wYFkw" class="icon-play popup-youtube"></a>
+									<img alt="" class="border-radius w-100" src="./img/gallary/5.JPG">
+									<a href="http://www.youtube.com/watch?v=0O2aH4XLbto" class="icon-play popup-youtube"> </a>
 								</div>
 								<div class="mt-4 text-dark">
 									<h2>Lorem ipsum dolor <span class="text-primary">ipsum dolor</span> amet adipisicing elit</h2>
@@ -379,8 +373,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
-	
+		</section> 
 		<!-- Events -->
 		<section id="events" class="events-sections navbar-is-white text-white section pp-scrollable d-flex align-items-center position-absolute" style="background-image:url('./img/events_Section.png');">
 			<div class="intro">
@@ -392,7 +385,27 @@
 								<div class="carousel-testimonials owl-carousel">
 									<div class="event">
 										<h5 class="mt-3 text-white sub_title">
-											Wedding party
+											Haldi Ceremony
+										</h5>
+										<div class="imagesection">
+											<img src="./img/wedding-party.png">
+										</div>
+										<h5 class="mt-3 text-white">
+											<a href="#"><i class="fas fa-map-marker-alt"></i> 3831 Cedar Lane, Somerville,
+												MA 02143 Australia</a>
+										</h5>
+										<h5 class="mt-1 mb-1 text-white">
+											<i class="fas fa-calendar-alt"></i> 31 Dec, 2023
+										</h5>
+										<p>
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus laudantium
+											eveniet impedit voluptate modi, assumenda in nulla autem. Eligendi magni
+											repellendus quae ex non doloremque voluptas nobis sit vel rem!
+										</p>
+									</div>
+									<div class="event">
+										<h5 class="mt-3 text-white sub_title">
+											Sangeet Ceremony
 										</h5>
 										<div class="imagesection">
 											<img src="./img/wedding-party.png">
@@ -436,8 +449,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
-	
+		</section> 
 		<!-- Map -->
 		<section id="contact" class="map_Section navbar-is-white text-white section pp-scrollable position-absolute" style="background-image:url('./img/map_section.png');">
 			<div class="intro">
@@ -451,7 +463,7 @@
 								<div class="">
 									<h4 class="text-white"><i class="fas fa-map-marker-alt"></i> 3831 Cedar Lane,
 										Somerville, MA
-										02143 Australia
+										02143 India
 									</h4>
 									<h4 class="text-white"><a href="tel:(303)569-1279">
 											<i class="fas fa-phone-alt"></i> (303) 569-1279</a>
@@ -482,7 +494,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12 text-center">
-								<h2 class="text-white mt-0">Let's Join our Party</h3>
+								<h2 class="text-white mt-0">Let's Join our Wedding</h3>
 									<div class="mt-5">
 										<form class="js-ajax-form">
 											<div class="form-group">
@@ -534,14 +546,13 @@
   </div>
 
   <!-- Optional JavaScript -->
-  <script src="./js/jquery-1.12.4.min.js"></script>
-  <script src="./js/wow.min.js"></script>
+  <script src="./js/jquery-1.12.4.min.js"></script> 
   <script src="./js/popper.min.js" ></script>
   <script src="./js/bootstrap.min.js"></script>
   <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
   <script src="./js/jquery.validate.min.js"></script>
   <script src="./js/jquery.magnific-popup.min.js"></script>
-  <script src="./js/jquery.pagepiling.min.js"></script>
+  <script src="./js/jquery.pagepiling.min.js"></script> 
   <script src="./js/owl.carousel.min.js"></script>
   <script src="./js/lightbox.js"></script>
   <script src="./js/custome.js"></script>

@@ -61,7 +61,7 @@
     }
 
     $('.popup-youtube').magnificPopup({
-        disableOn: 700,
+        // disableOn: 700,
         type: 'iframe',
         mainClass: 'mfp-fade',
         removalDelay: 160,
@@ -81,7 +81,7 @@
     $('.carousel-gallary').owlCarousel({
 	    loop:true,
 	    margin:10,
-        nav:false,
+        nav:true,
 	    dots:true,
 	    items:3,
         autoplay:true,
@@ -141,26 +141,37 @@
 	}
     
 })(jQuery);
-function updateTimer() {
-    future  = Date.parse("Dec 31, 2023 18:00:00");
-    now     = new Date();
-    diff    = future - now;
-  
-    days  = Math.floor( diff / (1000*60*60*24) );
-    hours = Math.floor( diff / (1000*60*60) );
-    mins  = Math.floor( diff / (1000*60) );
-    secs  = Math.floor( diff / 1000 );
-  
-    d = days;
-    h = hours - days  * 24;
-    m = mins  - hours * 60;
-    s = secs  - mins  * 60;
-  
-    document.getElementById("clock")
-      .innerHTML =
-        '<div>' + d + '<span>days</span></div>' +
-        '<div>' + h + '<span>hours</span></div>' +
-        '<div>' + m + '<span>min</span></div>' +
-        '<div>' + s + '<span>sec</span></div>' ;
-  }
-setInterval('updateTimer()', 1000 );
+
+// Counter ================================
+
+var counter = setInterval(function() { 
+    
+    var endTime = new Date("31 December 2023 00:00:00");			
+    endTime = (Date.parse(endTime) / 1000);
+    
+    var now = new Date();
+    now = (Date.parse(now) / 1000);
+    
+    var timeLeft = endTime - now;
+    
+    var days = Math.floor(timeLeft / 86400); 
+    var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+    var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
+    var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+    
+    if (hours < "10") { hours = "0" + hours; };
+    if (minutes < "10") { minutes = "0" + minutes; };
+    if (seconds < "10") { seconds = "0" + seconds; };
+    
+    document.getElementById("clock").innerHTML = '<div>' + days + '<span>days</span></div>' + '<div>' + hours + '<span>hours</span></div>' +
+    '<div>' + minutes + '<span>min</span></div>' + '<div>' + seconds + '<span>sec</span></div>'
+    
+    if(timeLeft < 1){
+        clearInterval(counter);
+        document.getElementById("CounterTextOff").innerHTML = ` <h2 class="heading">We are <span class="text-primary">Happyli Married</span></h2> `
+        document.getElementById("clock").innerHTML = ' ';
+        document.getElementById("merried-couple").src = './img/merried.png'
+        document.getElementById("merried-couple").style.width = '100%'
+    };
+    
+}, 1000);
